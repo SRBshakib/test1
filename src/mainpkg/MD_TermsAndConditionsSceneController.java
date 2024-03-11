@@ -56,6 +56,7 @@ public class MD_TermsAndConditionsSceneController implements Initializable {
         try (ObjectInputStream ois = new ObjectInputStream(new FileInputStream("termsAndConditions.bin"))) {
             String loadedData = (String) ois.readObject();
             showInfoLabel.setText(loadedData);
+            System.out.println("Data showed to binary file successfully.");
 
         } catch (IOException | ClassNotFoundException e) {
             e.printStackTrace();
@@ -65,7 +66,7 @@ public class MD_TermsAndConditionsSceneController implements Initializable {
     @FXML
     private void updateButtonOnClick(ActionEvent event) {
         try (ObjectOutputStream oos = new ObjectOutputStream(new FileOutputStream("termsAndConditions.bin"))) {
-             String termsAndConditions = showInfoLabel.getText();
+             String termsAndConditions = termsAndConditionsTextField.getText();
             oos.writeObject(termsAndConditions);
             System.out.println("Data saved to binary file successfully.");
         } catch (IOException e) {
