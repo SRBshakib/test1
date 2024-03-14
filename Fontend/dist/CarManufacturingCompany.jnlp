@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<jnlp spec="1.0" xmlns:jfx="http://javafx.com" href="CarManufacturingCompany.jnlp">
+  <information>
+    <title>CarManufacturingCompany</title>
+    <vendor>DIPAYON</vendor>
+    <description>null</description>
+    <offline-allowed/>
+  </information>
+  <resources>
+    <j2se version="1.6+" href="http://java.sun.com/products/autodl/j2se"/>
+    <jar href="CarManufacturingCompany.jar" size="12700" download="eager" />
+  </resources>
+  <jfx:javafx-desc  width="800" height="600" main-class="mainpkg.CarManufacturingCompany"  name="CarManufacturingCompany" />
+  <update check="always"/>
+</jnlp>
